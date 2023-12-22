@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="priceGuides/priceGuides.js"></script>
+
+
+</head>
+<body>
+    <nav id="add-priceGuides">
+        <input type="file" name="" id="priceGuides" accept=".pdf" multiple >
+        <div class="button" id="btn-priceGuides">Add Price Guides</div>
+    </nav>
+    <div class="app">
+<div class="left">
+
+    <div id="formContainer"></div>
+    <button onclick="submitForms()">Submit All</button>
+</div>
+    <div class="right">
+
+        <select name="select-priceGuides" id="select-priceGuides">
+            <option value="">Select Price Guide</option>
+        </select>
+        <iframe id ="iframe_priceGuide" src="" class="iframe_priceGuide" ="border: none;"></iframe>
+    </div>    
+    </div>
+
+    <script>
+        function load_priceGuide(pdfUrl){
+             // Your PDF file URL
+  document.getElementById('iframe_priceGuide').src = `priceGuides/${pdfUrl}`;
+        }
+    </script>
+</body>
+</html>
